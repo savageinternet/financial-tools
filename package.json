@@ -1,0 +1,18 @@
+{
+  "name": "financial-tools",
+  "version": "0.0.1",
+  "description": "Various financial tools and scripts.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savageinternet/financial-tools.git"
+  },
+  "author": "Savage Internet",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/savageinternet/financial-tools/issues"
+  },
+  "homepage": "https://github.com/savageinternet/financial-tools#readme",
+  "dependencies": {
+    "cypress": "^9.2.1"
+  }
+}
