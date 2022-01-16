@@ -12,11 +12,24 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+const fs = require('fs');
+const path = require('path');
+
+const { stringify } = require('csv-stringify/sync');
+
 /**
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
+  on('task', {
+    writeCsvFile({ filename, data }) {
+      const filePath = path.join(__dirname, '..', '..', 'build', filename);
+      const csvOutput = stringify(data, { header: true });
+      fs.writeFileSync(filePath, csvOutput);
+      return null;
+    }
+  });
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 }

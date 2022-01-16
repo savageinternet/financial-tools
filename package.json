@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/savageinternet/financial-tools#readme",
   "dependencies": {
+    "csv-stringify": "^6.0.5",
     "cypress": "^9.2.1"
   }
 }
